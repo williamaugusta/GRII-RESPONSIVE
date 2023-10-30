@@ -7,19 +7,51 @@
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />*@
     <script src="~/Scripts/modernizr-2.6.2.min.js"></script>
-
+    <link rel="stylesheet" href="~/Content/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/owl.theme.default.min.css">
 </head>
 <body>
 
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <footer id="gtco-footer" style="background-color: #800000; font-family: Montserrat;font-size:25px" class="gtco-section" role="contentinfo">
+            <div class="gtco-container">
+                <div class="row row-pb-md">
+                    <div class="col-md-4 gtco-widget gtco-footer-paragraph">
+                        <h3><strong>Lokasi</strong></h3>
+                        <p><a style="color:white" href="https://goo.gl/maps/93vE74jMA25wdArC6"><strong>GRII Solo</strong><br>Jl.  Abdul Muis No. 57<br>Setabelan, Banjarsari Surakarta<br>Jawa Tengah 57139</a></p>
+                    </div>
+                    <div class="col-md-4 gtco-widget gtco-footer-paragraph" style="color:white">
+                        <p><strong>HP / WA </strong>: <a style="color:white" href="https://wa.me/6281350003070">0813 5000 3070</a><br><strong>Email</strong> : griisolo@yahoo.com</p>
+                    </div>
+                    <div class="col-md-4 gtco-widget gtco-footer-paragraph" style="color:white">
+                        <p><strong>Persembahan<br></strong>BCA Cab. Nusukan Solo<br>817 513 2020 - GRII Solo (Operasional)<br>817 513 8800 - GRII Solo (Pembangunan)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gtco-copyright" style="background-color: #800000;">
+                <div class="gtco-container">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <p><small></small></p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <p><small style="color:white">© Copyright @DateTime.Now.ToString("yyyy") - GRII Solo</small> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
+    @*<script src="~/Scripts/jquery.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>*@
     <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.easing.1.3.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.waypoints.min.js"></script>
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
 </body>
 </html>
