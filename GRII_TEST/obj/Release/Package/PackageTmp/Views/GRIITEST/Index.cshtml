@@ -1,0 +1,181 @@
+﻿@model IEnumerable<GRII_TEST.Models.Slider>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>GRII Solo - Gereja Reformed Injili Indonesia</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/GRIITEST/Index">
+                <img src="~/images/logoGRIITransparan.png" alt="..." height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/GRIITEST/Index">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tentang Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/GRIITEST/Visi_Misi">Visi dan Misi</a></li>
+                            <li><a class="dropdown-item" href="/GRIITEST/Pengakuan_Iman">Pengakuan Iman</a></li>
+                            <li><a class="dropdown-item" href="/GRIITEST/Beban_Doa">Beban Doa</a></li>
+                            <li><a class="dropdown-item" href="/GRIITEST/Profil_Hamba_Tuhan">Profil Hamba Tuhan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/GRIITEST/Gerakan_Grii">GERAKAN REFORMED INJILI INDONESIA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/GRIITEST/Kegiatan">KEGIATAN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/final-frontpage.jpg" class="img-fluid" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Selamat Datang di GRII Solo</h2>
+                    <p>GEREJA REFORMED INJILI INDONESIA SOLO Gereja yang berlandaskan teologi REFORMED dan semangat untuk terus mengabarkan INJIL</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-md-offset-2 gtco-heading text-center">
+        <h2><strong>Events GRII Solo</strong></h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="owl-carousel owl-carousel-fullwidth">
+                @foreach (var item in Model)
+                {
+                    <div class="item">
+                        <img src="@item.src" alt="">
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-md-offset-2 gtco-heading text-center">
+        <h2><strong>Jadwal Kegiatan</strong></h2>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td style="font-size:large">Minggu, 09.00</td>
+                    <td style="text-align: left; font-size: large"><strong>Kebaktian Umum</strong></td>
+                </tr>
+                <tr>
+                    <td style="font-size:large">Minggu, 09.00</td>
+                    <td style="text-align:left;font-size:large"><strong>Sekolah Minggu</strong></td>
+                </tr>
+                <tr>
+                    <td style="font-size:large">Selasa, 19.00</td>
+                    <td style="text-align:left;font-size:large"><strong>Pelatihan Paduan Suara</strong></td>
+                <tr>
+                    <td style="font-size:large">Rabu, 19.00</td>
+                    <td style="text-align: left; font-size: large"><strong>Pendalaman Alkitab & Persekutuan Doa</strong></td>
+                </tr>
+                <tr>
+                    <td style="font-size:large">Kamis, 19.00</td>
+                    <td style="text-align: left; font-size: large"><strong>OSG (Organic Small Group) GRII Solo (Sebulan 1x)</strong></td>
+                </tr>
+                <tr>
+                    <td style="font-size:large">Jumat, 17.00</td>
+                    <td style="text-align: left; font-size: large"><strong>Pendalaman Alkitab Remaja</strong></td>
+                </tr>
+                <tr>
+                    <td style="font-size:large">Jumat, 17.00</td>
+                    <td style="text-align: left; font-size: large"><strong>Persekutuan Senior (Minggu III)</strong></td>
+                </tr>
+                <tr>
+                    <td style="font-size:large">Sabtu, 07.45</td>
+                    <td style="text-align: left; font-size: large"><strong>Pelayanan PI Rumah Sakit</strong></td>
+                </tr>
+                <tr>
+                    <td style="font-size:large">Sabtu, 17.00</td>
+                    <td style="text-align: left; font-size: large"><strong>Persekutuan Pemuda, Profesional dan Mahasiswa</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-12 col-md-offset-2 gtco-heading text-center">
+        <h2><strong>YouTube Feed GRII Solo</strong></h2>
+        <p class="has-text-align-center" style="font-size:25px"><em>dengan setia eksposisi ayat-ayat Firman Tuhan dan sungguh-sungguh menjabarkan Kebenaran yang sejati</em></p>
+        <div class="videos">
+            <div>
+                <iframe class="latestVideoEmbed" vnum='0' frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <iframe class="latestVideoEmbed" vnum='1' frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <iframe class="latestVideoEmbed" vnum='2' frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="text-align:center !important;">
+        <h2><strong>Resources GRII Solo</strong></h2>
+        <div class="col-xs-12 col-md-12">
+            <div class="col-xs-2 col-md-2 feature-box">
+                <div class="hestia-info"><a href="https://www.youtube.com/c/GRIISOLO"><img decoding="async" src="~/images/youtube.png" alt="" class="wp-image-241" width="50" height="50"></a></div>
+            </div>
+            <div class="col-xs-2 col-md-2 feature-box">
+                <div class="hestia-info"><a href="https://www.instagram.com/griisolo/"><img decoding="async" loading="lazy" src="~/images/instagram-logo.png" alt="" class="wp-image-241" width="50" height="50"></a></div>
+            </div>
+            <div class="col-xs-2 col-md-2 feature-box">
+                <div class="hestia-info"><a href="https://www.facebook.com/grii.surakarta/"><img decoding="async" loading="lazy" src="~/images/facebook_logos.png" alt="" class="wp-image-241" width="50" height="50"></a></div>
+            </div>
+            <div class="col-xs-2 col-md-2 feature-box">
+                <div class="hestia-info"><a href="https://open.spotify.com/show/5LREvK3nwRXRJH3rxxD6eu?si=I5ykmCceSJqN6ACf8Y1jPg"><img decoding="async" loading="lazy" src="~/images/Spotify.png" alt="" class="wp-image-241" width="50" height="50"></a></div>
+            </div>
+            <div class="col-xs-2 col-md-2 feature-box"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+<script>
+    const loadVideo = (iframe) => {
+        const cid = "UCdg5YIfbsRMQrXpHBX1y1YQ";
+        const channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
+        const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
+
+        fetch(reqURL)
+            .then(response => response.json())
+            .then(result => {
+                const videoNumber = iframe.getAttribute('vnum')
+                const link = result.items[videoNumber].link;
+                const id = link.substr(link.indexOf("=") + 1);
+                iframe.setAttribute("src", `https://youtube.com/embed/${id}?controls=0&autoplay=0&mute=0`);
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    const iframes = document.getElementsByClassName('latestVideoEmbed');
+    for (let i = 0, len = iframes.length; i < len; i++) {
+        loadVideo(iframes[i]);
+    }
+</script>
