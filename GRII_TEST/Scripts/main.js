@@ -220,10 +220,6 @@
 		      "<i class='ti-arrow-right owl-direction'></i>"
 	     	]
 		});
-
-
-		
-
 	};
 
 	var tabs = function() {
