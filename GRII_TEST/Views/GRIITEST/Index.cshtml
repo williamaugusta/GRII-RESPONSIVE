@@ -11,6 +11,89 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <style>
+        .container1 {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+        }
+
+        .responsive-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 7vw;
+        }
+
+        p {
+            text-align: center;
+            font-size: large;
+        }
+
+        .responsive {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .banner-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .banner-container .banner {
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+
+                .banner-container .banner .shoe {
+                    flex: 1 auto;
+                    padding: 15px;
+                    text-align: center;
+                }
+
+                    .banner-container .banner .shoe .img {
+                        width: 100%;
+                    }
+
+                .banner-container .banner .content {
+                    flex: 1 1 250px;
+                    text-align: center;
+                    padding: 10px;
+                }
+
+                    .banner-container .banner .content h2 {
+                        text-align: center;
+                        position: absolute;
+                        top: 60%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: white;
+                    }
+
+                    .banner-container .banner .content p {
+                        text-align: center;
+                        position: absolute;
+                        top: 75%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: white;
+                    }
+    </style>
+
     <title>GRII Solo - Gereja Reformed Injili Indonesia</title>
 </head>
 <body>
@@ -133,16 +216,14 @@
         <h2><strong>YouTube Feed GRII Solo</strong></h2>
         <p class="has-text-align-center" style="font-size:25px"><em>dengan setia eksposisi ayat-ayat Firman Tuhan dan sungguh-sungguh menjabarkan Kebenaran yang sejati</em></p>
         <div class="videos">
-            <div>
-                <iframe class="latestVideoEmbed" vnum='0' frameborder="0" allowfullscreen></iframe>
+            <div class="container1">
+                <iframe class="responsive-iframe" vnum='0' frameborder="0" allowfullscreen></iframe>
             </div>
-
-            <div>
-                <iframe class="latestVideoEmbed" vnum='1' frameborder="0" allowfullscreen></iframe>
+            <div class="container1">
+                <iframe class="responsive-iframe" vnum='1' frameborder="0" allowfullscreen></iframe>
             </div>
-
-            <div>
-                <iframe class="latestVideoEmbed" vnum='2' frameborder="0" allowfullscreen></iframe>
+            <div class="container1">
+                <iframe class="responsive-iframe" vnum='2' frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -231,7 +312,7 @@
             .catch(error => console.log('error', error));
     }
 
-    const iframes = document.getElementsByClassName('latestVideoEmbed');
+    const iframes = document.getElementsByClassName('responsive-iframe');
     for (let i = 0, len = iframes.length; i < len; i++) {
         loadVideo(iframes[i]);
     }
